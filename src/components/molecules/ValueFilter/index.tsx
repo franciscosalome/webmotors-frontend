@@ -1,18 +1,10 @@
 import { useEffect, useState } from "react";
-import styled from "styled-components";
-import { useFilter } from "../../contexts/FilterContext";
-import { formatCurrency } from "../../utils/formater";
-import { LabelContainer } from "../atoms/LabelContainer";
-import { PriceSelector } from "./PriceSelector";
+import { useFilter } from "../../../contexts/FilterContext";
+import { formatCurrency } from "../../../utils/formater";
+import { LabelContainer } from "../../atoms/LabelContainer";
+import { PriceSelector } from "./../PriceSelector";
+import { Container } from "./style";
 
-
-const Span = styled.span`
-  font-size: 0.8rem;
-`
-
-const Container = styled.div`
-
-`
 
 export function ValueFilter() {
 
@@ -56,7 +48,7 @@ export function ValueFilter() {
     <Container onClick={(e)=>handleShowHidePriceFilter(e)}>
       <LabelContainer 
       placeholder={placeholder}>
-        <Span>{labelText}</Span>
+        <span>{labelText}</span>
       </LabelContainer>
       {showPriceFilter ? (
         <PriceSelector />

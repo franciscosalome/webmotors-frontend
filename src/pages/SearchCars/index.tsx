@@ -1,5 +1,4 @@
 import { useEffect } from "react";
-import { Input } from "../../components/atoms/Input";
 import { SearchCarsBox } from "../../components/organisms/SearchCarsBox";
 import { getMakes } from "../../services/cars";
 import { Container, Content } from "./style";

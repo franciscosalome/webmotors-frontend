@@ -1,12 +1,7 @@
-import styled from "styled-components"
-import { useFilter } from "../../contexts/FilterContext"
-import {SwitchButton} from '../atoms/SwitchButton'
-const Container = styled.div`
-  width: 100%;
-  display: flex;
-  align-items: flex-end;
-  justify-content: flex-start;
-`
+import { useFilter } from "../../../contexts/FilterContext"
+import {SwitchButton} from '../../atoms/SwitchButton'
+import { Container } from "./style"
+
 
 export function SwitchMenu(){
   const {selectedMenu, handleSelectedMenu } = useFilter()

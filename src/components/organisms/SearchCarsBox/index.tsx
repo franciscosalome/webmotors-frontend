@@ -1,59 +1,19 @@
 import { useEffect, useState } from "react";
-import styled from "styled-components";
-import { getMakes, getModels, getVersions } from "../../services/cars";
-import { Button } from "../atoms/Button";
-import { Checkbox } from "../atoms/Checkbox";
-import { OpenButton } from "../atoms/OpenButton";
-import { Select } from "../molecules/Select";
-import { SwitchMenu } from "../molecules/SwitchMenu";
-import { yearsGenerator } from "../../utils/generators";
-import { useCar } from "../../contexts/CarContext";
+import { getMakes, getModels, getVersions } from "../../../services/cars";
+import { Button } from "../../atoms/Button";
+import { Checkbox } from "../../atoms/Checkbox";
+import { OpenButton } from "../../atoms/OpenButton";
+import { Select } from "../../molecules/Select";
+import { SwitchMenu } from "../../molecules/SwitchMenu";
+import { yearsGenerator } from "../../../utils/generators";
+import { useCar } from "../../../contexts/CarContext";
 
-import { ValueFilter } from "../molecules/ValueFilter";
-import { LocationSelect } from "../molecules/LocationSelect";
-import { useFilter } from "../../contexts/FilterContext";
+import { ValueFilter } from "../../molecules/ValueFilter";
+import { LocationSelect } from "../../molecules/LocationSelect";
+import { useFilter } from "../../../contexts/FilterContext";
+import { Container, Content, FiltersContainer } from "./style";
 
-const Container = styled.section`
-  padding: 3rem 0;
-  width: 100%;
-  max-height: 312px;
-  display: block;
-  & > div {
-    display: flex;
-  }
 
-  & .checkbox-container {
-      display: flex;
-      flex-direction: row;
-      &:first-child {
-        margin-right: 1rem;
-      }
-  }
-
-  & footer {
-    display: flex;
-    justify-content: space-between;
-  }
- 
-`
-const Content = styled.section`
-  background: var(--shape);
-  padding: 1rem;
-`
-const FiltersContainer = styled.section`
-  display: flex;
-  justify-content: space-between;
-  & > section {
-    max-width: 50%;
-    flex-grow: 1;
-    & > div {
-      display: flex;
-    }
-  }
-
-  & .model-filter-container {
-  }
-`
 export function SearchCarsBox() {
 
   const {

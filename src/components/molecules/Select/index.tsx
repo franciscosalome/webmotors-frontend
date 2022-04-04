@@ -1,11 +1,7 @@
 import styled from "styled-components"
-import { LabelContainer } from "../atoms/LabelContainer";
+import { LabelContainer } from "../../atoms/LabelContainer";
+import { SelectField } from "./style";
 
-const SelectField = styled.select`
-    border: none;
-    outline: none;
-    flex-grow: 1;
-`
 interface SelectProps {
   options: [];
   placeholder?: string;

@@ -1,22 +1,7 @@
-import styled from "styled-components";
-import { useFilter } from "../../contexts/FilterContext";
-import { LabelContainer } from "../atoms/LabelContainer";
+import { useFilter } from "../../../contexts/FilterContext";
+import { LabelContainer } from "../../atoms/LabelContainer";
+import { Content } from "./style";
 
-const Content = styled.div`
-  display: flex;
-  padding: 0;
-
-  & >input {
-    border: none;
-    width: 100%;
-    text-align: center;
-  }
-
-  & > div {
-    margin: 0;
-    border-top: 0;
-  }
-`
 
 export function LocationSelect() {
 

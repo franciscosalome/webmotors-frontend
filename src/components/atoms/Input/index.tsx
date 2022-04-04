@@ -1,5 +1,5 @@
 import React from "react";
-import styled from "styled-components";
+import { Input } from "./style";
 
 interface InputWithIconProps {
   style: React.CSSProperties;
@@ -7,11 +7,6 @@ interface InputWithIconProps {
   onChange: ()=>void;
 
 }
-
-export const Input = styled.input`
-  height: 3rem;
-  border: thin solid var(--gray500);
-`
 
 export function InputWithIcon({}:InputWithIconProps){
   return(
